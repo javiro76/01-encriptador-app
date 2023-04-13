@@ -26,10 +26,7 @@ const encriptar = (texto) => {
                                  replaceAll('o', ober).
                                  replaceAll('u', ufat);
       console.log(nuevaCandena);
-      console.log(typeof(nuevaCandena));
-
 }
 
 
-//console.log('hola mundo');
 encriptar(texto);
