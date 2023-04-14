@@ -46,7 +46,7 @@ header {
 
 .cajaUno {
   margin-top: 50px;
-  width: 50%;
+  width: 510px;
   height: 100%;
   background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
  
@@ -57,7 +57,7 @@ header {
   height: 100%;
   background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
   display: flex;
-  flex-direction: column; 
+  flex-wrap: wrap; 
 }
 
 #myInput {
@@ -78,6 +78,23 @@ header {
 
 #myInput::placeholder {
   color:rgba(10, 56, 113, 1);
+}
+
+#icono {
+  margin-top: 1px;
+  width: 16px;
+  height: 16px;
+  
+}
+
+#letrero{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 0px;
+  color:rgba(10, 56, 113, 1);
+  margin-left: 10px;
 }
 
 
