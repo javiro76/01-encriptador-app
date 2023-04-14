@@ -24,11 +24,24 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
+	width:1440px;
+	height:1024px;
+	position:absolute;
+  color: #000;
+}
+
+header {
+
+  color:rgba(10.000000353902578, 56.000000461936, 113.00000086426735, 1);
+	display: flex;
+  align-items: center;
+}
+
+.main {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: row;
+
 }
 
 h1 {
@@ -95,3 +108,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
