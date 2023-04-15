@@ -42,13 +42,15 @@ header {
 .main {
   display: flex;
   flex-direction: row;
+  height: 784px;
+  width: 1160px;
 
 }
 
 .cajaUno {
   margin-top: 50px;
-  width: 510px;
-  height: 100%;
+  width: 680px;
+  height: 717px;
   background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
  
 }
@@ -62,10 +64,10 @@ header {
 }
 
 #myInput {
-  width: 500px;
-  height: 300px;
+  width: 680px;
+  height: 670px;
   border: none;
-  font-size: 20px;
+  font-size: 32px;
   font-family: 'Arial', sans-serif;
   color:rgba(10, 56, 113, 1);;
   padding: 10px;
@@ -109,10 +111,10 @@ header {
 }
 
 button {
-  width: 250px;
-  height: 40px;
+  width: 328px;
+  height: 67px;
   background-color:rgba(10, 56, 113, 1);
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
   font-family: 'Roboto', sans-serif;
