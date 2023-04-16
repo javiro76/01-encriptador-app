@@ -134,6 +134,31 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.cajaDos {
+  margin-top: 0px;
+  margin-left: 80px;
+  width: 400px;
+  height: 944px;
+  
+}
+
+#dibujo{
+  margin-top: 243px;
+  
+}
+
+#tarjeta {
+  margin-top: 0px;
+  width: 400px;
+  height: 890px;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
 
 h1 {
   font-size: 3.2em;
