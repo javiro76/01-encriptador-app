@@ -6,12 +6,17 @@ const initStore = () => {
 
 
 let enter = 'enter',
-imes  = 'imes', 
-ai   = 'ai',
-ober = 'ober',
-ufat = 'ufat';
+    imes  = 'imes', 
+    ai   = 'ai',
+    ober = 'ober',
+    ufat = 'ufat';
 
 
+let e = 'e',
+    i = 'i', 
+    a = 'a',
+    o = 'o',
+    u = 'u';
 
 const encriptar = (texto) => {
     
@@ -25,7 +30,25 @@ const encriptar = (texto) => {
 }
 
 
+const desencriptar = (texto) => {
+
+      const nuevaCandena = texto.replaceAll( 'enter',e).
+                                 replaceAll( 'imes',i).
+                                 replaceAll( 'ai',a).
+                                 replaceAll( 'ober',o).
+                                 replaceAll( 'ufat',u);
+      //console.log(nuevaCandena);
+      return nuevaCandena;
+}
+
+
+
+
+
+
+
 export default {
+    desencriptar,
     encriptar,
     initStore,
 };

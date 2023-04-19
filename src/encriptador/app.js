@@ -16,6 +16,7 @@ export const App = ( elementId ) => {
     //Referencias HTML
 
     const encriptarBtn = document.querySelector('#encriptarBtn');
+    const desencriptarBtn = document.querySelector('#desencriptarBtn');
     const myInput = document.querySelector('#myInput');
     const myOutput = document.querySelector('#myOutput');
     
@@ -33,6 +34,11 @@ export const App = ( elementId ) => {
 
     myInput.addEventListener('click', () => {
         mostrarTarjeta('#dibujoInicial','#resultado');
+    });
+
+    desencriptarBtn.addEventListener('click', () => {
+        const textoDesencriptado = encriptadorStore.desencriptar(myInput.value);
+        myOutput.innerText = textoDesencriptado;
     });
 
 
