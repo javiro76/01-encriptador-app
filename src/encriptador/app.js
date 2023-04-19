@@ -17,6 +17,7 @@ export const App = ( elementId ) => {
 
     const encriptarBtn = document.querySelector('#encriptarBtn');
     const desencriptarBtn = document.querySelector('#desencriptarBtn');
+    const copiarBtn = document.querySelector('#copiarBtn');
     const myInput = document.querySelector('#myInput');
     const myOutput = document.querySelector('#myOutput');
     
@@ -39,6 +40,13 @@ export const App = ( elementId ) => {
     desencriptarBtn.addEventListener('click', () => {
         const textoDesencriptado = encriptadorStore.desencriptar(myInput.value);
         myOutput.innerText = textoDesencriptado;
+    });
+
+    copiarBtn.addEventListener('click', () => {
+        
+        encriptadorStore.copyToClipboard(myOutput);
+        myInput.value = '';
+       
     });
 
 

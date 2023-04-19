@@ -41,6 +41,13 @@ const desencriptar = (texto) => {
       return nuevaCandena;
 }
 
+const copyToClipboard = (texto) => { 
+
+    texto.select();
+    document.execCommand('copy');
+
+};   
+
 
 
 
@@ -48,6 +55,7 @@ const desencriptar = (texto) => {
 
 
 export default {
+    copyToClipboard,
     desencriptar,
     encriptar,
     initStore,
