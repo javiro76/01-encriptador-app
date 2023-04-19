@@ -1,10 +1,16 @@
 
+/**
+ * 
+ * @param {idHTML} noMostrar Selector para ocultar la tarjeta
+ * @param {idHTML} mostrar Selector para mostrar la tarjeta
+ */
 
+export const mostrarTarjeta = ( noMostrar,mostrar) => {
 
-export const mostrarTarjeta = ( element, element2 ) => {
-
-    element = document.getElementById(element).style.display = "block";
-    element2 = document.getElementById(element2).style.display = "none";
+    
+    noMostrar = document.querySelector(noMostrar).style.display = "none";
+    mostrar = document.querySelector(mostrar).style.display = "block";
+    
 
 };
 

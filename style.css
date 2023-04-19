@@ -203,6 +203,8 @@ button:focus-visible {
   outline: none;
   font-family: 'Arial', sans-serif;
   font-size: 30px;
+  color: #000000;
+  padding: 30px 0px 0px 5px;
 }
 
 
