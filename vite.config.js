@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig ({
 
-    base: '/js-vite-encriptador/'
+    base: '/01-encriptador-app/'
 
 });
