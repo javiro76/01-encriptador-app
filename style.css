@@ -12,6 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --bgn-btn: rgba(10, 56, 113, 1);
+  --card-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --text-input: #00000098;
+  --border-radius: 12px;
 }
 
 a {
@@ -24,106 +29,116 @@ a:hover {
 }
 
 body {
-  background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
-	width:1440px;
-	height:1024px;
-	position:absolute;
+  background-color: #f1f1f1;
   color: #000;
+  height: 100vh;
 }
 
 header {
-
-  color:rgba(10.000000353902578, 56.000000461936, 113.00000086426735, 1);
-	display: flex;
+  color: rgba(10.000000353902578, 56.000000461936, 113.00000086426735, 1);
+  display: flex;
   align-items: center;
   margin-left: -100px;
 }
 
 .main {
   display: flex;
-  flex-direction: row;
-  height: 784px;
-  width: 1160px;
-
+  justify-content: space-evenly;
 }
 
 .cajaUno {
-  margin-top: 50px;
-  width: 680px;
-  height: 717px;
-  background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
- 
+  background-color: rgba(
+    243.00000071525574,
+    245.00000059604645,
+    252.00000017881393,
+    1
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 680px;
 }
 
 .principal {
   width: 100%;
   height: 100%;
-  background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
+  background-color: rgba(
+    243.00000071525574,
+    245.00000059604645,
+    252.00000017881393,
+    1
+  );
   display: flex;
-  flex-wrap: wrap; 
+  flex-direction: column;
 }
 
 #myInput {
-  width: 680px;
-  height: 670px;
+  height: 40vh;
   border: none;
   font-size: 32px;
-  font-family: 'Arial', sans-serif;
-  color:rgba(10, 56, 113, 1);;
+  font-family: "Arial", sans-serif;
+  color: var(--text-input);
   padding: 10px;
   box-sizing: border-box;
   text-align: left;
   vertical-align: top;
   resize: none;
-  background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(
+    243.00000071525574,
+    245.00000059604645,
+    252.00000017881393,
+    1
+  );
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
 }
 
 #myInput::placeholder {
-  color:rgba(10, 56, 113, 1);
+  color: rgb(62, 63, 65);
 }
 
 #icono {
-  margin-top: 1px;
+  margin-right: 6px;
   width: 16px;
   height: 16px;
-  
 }
 
-#letrero{
-  font-family: 'Roboto', sans-serif;
+#letrero {
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 0px;
-  color:rgba(10, 56, 113, 1);
+  color: rgba(10, 56, 113, 1);
   margin-left: 10px;
 }
 
 .botones {
-  margin-top: 10px;
-  width: 100%;
-  height: 67px;
-  background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
+  margin-top: 2rem;
+  background-color: rgba(
+    243.00000071525574,
+    245.00000059604645,
+    252.00000017881393,
+    1
+  );
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 button {
-  width: 328px;
-  height: 67px;
-  background-color:rgba(10, 56, 113, 1);
-  border-radius: 20px;
+  min-width: 120px;
+  padding: 20px 0;
+  background-color: rgba(10, 56, 113, 1);
+  border-radius: var(--border-radius);
   border: none;
-  color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
-  font-family: 'Roboto', sans-serif;
+  color: rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
+  font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 1em;
   line-height: 0px;
   text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
 }
 
 button:hover {
@@ -136,53 +151,43 @@ button:focus-visible {
 
 .cajaDos {
   margin-top: 0px;
-  margin-left: 80px;
   width: 400px;
-  height: 944px;
-  
+  display: flex;
+  flex-direction: column;
 }
 
-#dibujo{
-  margin-top: 243px;
-  
+#dibujo {
+  padding: 2rem 2rem 0 2rem;
 }
 
 #tarjetaDibujo {
   margin-top: 0px;
-  width: 400px;
-  height: 890px;
   background-color: white;
-  border-radius: 32px;
-  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-wrap: wrap; 
   justify-content: space-between;
-  
+  min-height: 600px;
 }
 
-
-
 #mensajeUno {
-  margin-top: 40px;
   font-size: 22px;
   line-height: 40px;
   text-align: center;
-  color:#343A40;
-  
+  color: #343a40;
+  padding: 0 10px;
 }
 
 #mensajeDos {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: lighter;
-  color: #495057;  
-  
+  color: #495057;
 }
 
 .dibujoInicial {
-  display:block;
-  
+  display: block;
 }
 
 .resultado {
@@ -191,54 +196,31 @@ button:focus-visible {
 
 #myOutput {
   margin-top: 0px;
-  width: 395px;
-  height: 770px;
   background-color: white;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   border: none;
   resize: none;
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
   outline: none;
-  font-family: 'Arial', sans-serif;
   font-size: 30px;
-  color: #000000;
-  padding: 30px 0px 0px 5px;
+  color: #555353;
+  padding: 10px 10px 10px 20px;
+}
+#myOutput::placeholder {
+  color: var(--text-input);
 }
 
-
 #app {
-  max-width: 1280px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
 footer {
-  height: 10px;
-  width: 500px;
-  margin-top: 50px;
-  padding: 2rem;
+  margin-top: 2rem;
   text-align: left;
   background-color: #f9f9f9;
   border-top: 1px solid #eaeaea;
-}
-
-
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
 
 ul {
@@ -247,208 +229,74 @@ ul {
   margin: 0;
 }
 
-@media all and (max-width: 768px) {
-
-body{
-  height: 1174px;
-    width: 768px;
-
+.info-myInput {
+  display: flex;
+  align-items: center;
 }
 
-header {
-
-  
-  margin-left: -50px;
+section > img {
+  padding: 10px;
 }
 
-.encriptador{
-  height: 1000px;
+.botones_input {
+  width: 100%;
+  text-align: left;
 }
 
-  .main{
-    display: flex;
+#desencriptarBtn {
+  margin-left: 30px;
+}
+
+#copiarBtn {
+  margin-top: 50px;
+  max-width: 120px;
+}
+button#copiarBtn {
+  background: none;
+  border: 1px var(--bgn-btn) solid;
+  color: var(--bgn-btn);
+}
+button#desencriptarBtn {
+  background: none;
+  border: 1px var(--bgn-btn) solid;
+  color: var(--bgn-btn);
+}
+button#encriptarBtn {
+  font-weight: bold;
+}
+@media all and (max-width: 400px) {
+  .main {
     flex-direction: column;
-    height: 1000px;
-    width: 768px;
-
+  }
+  section > img {
+    width: 90px;
+    margin: 0 auto;
+  }
+  #app {
+    padding: 10px;
+  }
+  .cajaDos {
+    width: auto;
+  }
+  body {
+    height: auto;
   }
   .cajaUno {
-    margin-top: 50px;
-    width: 688px;
-    height:500px;
-    background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
-   
+    min-height: 465px;
   }
-
-  .principal {
-    width: 80%;
-    height: 80%;
-    background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
-    display: flex;
-    flex-wrap: wrap; 
+  #dibujo {
+    padding: 0;
   }
-
-  #myInput {
-    width: 120%;
-    height:300px;
-    
-  }
-
-  .cajaDos {
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 688px;
-    height: 450px;
-    
-  }
-
   #tarjetaDibujo {
-    margin-top: 20px;
-    width: 100%;
-    height: 100%;
-      
+    min-height: fit-content;
   }
-  #dibujo{
-    display: none;
-      
+  #copiarBtn {
+    margin-top: 1rem;
   }
-
-  #mensajeUno {
-    width: 150%;
-    line-height: 40px;
-    text-align: center;
-     
+  footer {
+    margin-top: 0.75rem;
   }
-
-  #mensajeDos {
-    width: 150%;
-    line-height: 40px;
-    text-align: center;
-      
+  #myInput {
+    height: 265px;
   }
-
-  .resultado{
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 688px;
-    height: 450px;
-
-  }
-
-  #myOutput {
-    width: 100%;
-    height: 300px;
-    
-  }
-
-  
-}
-
-@media all and (max-width: 375px) {
-
-
-  body{
-      height: 1400px;
-      width: 375px;
-  
-  }
-  
-
-  
-  .encriptador{
-    height: 1000px;
-  }
-
-
-
-  .main{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-
-  }
-  .cajaUno {
-    margin-top: 50px;
-    width: 100%;
-    height: 643px;
-    background-color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
-   
-  }
-
-  .botones{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    
-    
-  }
-
-  button {
-    width: 311px;
-    height: 67px;
-    background-color:rgba(10, 56, 113, 1);
-    border-radius: 20px;
-    border: none;
-    color:rgba(243.00000071525574, 245.00000059604645, 252.00000017881393, 1);
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 0px;
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  button:hover {
-    border-color: #646cff;
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-
-  .cajaDos {
-    margin-top: 70px;
-    margin-left: 0px;
-    width: 100%;
-    height: 450px;
-    
-  }
-
-  #mensajeUno {
-    width: 100%;
-    line-height: 40px;
-    text-align: center;
-     
-  }
-
-  #mensajeDos {
-    width: 90%;
-    line-height: 40px;
-    text-align: center;
-      
-  }
-
-  .resultado{
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 90%;
-    height: 100%;
-
-  }
-
-  #copiarBtn{
-    margin-top: 130px;
-
-  }
-
-  .info{
-    margin-top: 100px;
-    width:  250px;
-  }
-
-
-
-  
 }
