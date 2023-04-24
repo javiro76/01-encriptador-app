@@ -265,3 +265,41 @@ button#encriptarBtn {
   font-weight: bold;
 }
 
+@media all and (max-width: 500px) {
+  /* Definir estilos específicos para dispositivos móviles aquí */
+
+  .main {
+    flex-direction: column;
+  }
+  section > img {
+    width: 90px;
+    margin: 0 auto;
+  }
+  #app {
+    padding: 10px;
+  }
+  .cajaDos {
+    width: auto;
+  }
+  body {
+    height: auto;
+  }
+  .cajaUno {
+    min-height: 465px;
+  }
+  #dibujo {
+    padding: 0;
+  }
+  #tarjetaDibujo {
+    min-height: fit-content;
+  }
+  #copiarBtn {
+    margin-top: 1rem;
+  }
+  footer {
+    margin-top: 0.75rem;
+  }
+  #myInput {
+    height: 265px;
+  }
+}
